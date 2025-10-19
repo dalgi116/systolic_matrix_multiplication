@@ -39,13 +39,15 @@ module main4x4(
         sop30, sop31, sop32, sop33
     );
     
-    wire done;
+    wire done, clear;
+    wire [15:0] a0, a1, a2, a3, b0, b1, b2, b3;
    
     controller4x4 controller(
         clk, reset, start,
         
         a00, a01, a02, a03,
-        a10, a11, a22, a23,
+        a10, a11, a12, a13,
+        a20, a21, a22, a23,
         a30, a31, a32, a33,
         
         b00, b01, b02, b03,

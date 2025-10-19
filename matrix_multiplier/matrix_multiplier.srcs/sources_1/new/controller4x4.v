@@ -42,7 +42,7 @@ module controller4x4(
         IDLE = 2'b00,
         START = 2'b01,
         LOAD = 2'b10,
-        END = 2'b01;
+        END = 2'b11;
     
     always @(posedge clk) begin
         if (reset) begin
@@ -75,32 +75,32 @@ module controller4x4(
                         clear <= 1'b0;
                         case(load_cycle)
                             3'd0: begin
-                                a0<=a30; a1<=16'd0; a2<=16'd0; a3<=16'd0;
-                                b0<=b03; b1<=16'd0; b2<=16'd0; b3<=16'd0;
+                                a0<=a03; a1<=16'd0; a2<=16'd0; a3<=16'd0;
+                                b0<=b30; b1<=16'd0; b2<=16'd0; b3<=16'd0;
                             end
                             3'd1: begin
-                                a0<=a20; a1<=a31; a2<=16'd0; a3<=16'd0;
-                                b0<=b02; b1<=b13; b2<=16'd0; b3<=16'd0;
+                                a0<=a02; a1<=a13; a2<=16'd0; a3<=16'd0;
+                                b0<=b20; b1<=b31; b2<=16'd0; b3<=16'd0;
                             end
                             3'd2: begin
-                                a0<=a10; a1<=a21; a2<=a32; a3<=16'd0;
-                                b0<=b01; b1<=b12; b2<=b23; b3<=16'd0;
+                                a0<=a01; a1<=a12; a2<=a23; a3<=16'd0;
+                                b0<=b10; b1<=b21; b2<=b32; b3<=16'd0;
                             end
                             3'd3: begin
                                 a0<=a00; a1<=a11; a2<=a22; a3<=a33;
                                 b0<=b00; b1<=b11; b2<=b22; b3<=b33;
                             end
                             3'd4: begin
-                                a0<=16'd0; a1<=a01; a2<=a12; a3<=a23;
-                                b0<=16'd0; b1<=b10; b2<=b21; b3<=b32;
+                                a0<=16'd0; a1<=a10; a2<=a21; a3<=a32;
+                                b0<=16'd0; b1<=b01; b2<=b12; b3<=b23;
                             end
                             3'd5: begin
-                                a0<=16'd0; a1<=16'd0; a2<=a02; a3<=a13;
-                                b0<=16'd0; b1<=16'd0; b2<=b20; b3<=b31;
+                                a0<=16'd0; a1<=16'd0; a2<=a20; a3<=a31;
+                                b0<=16'd0; b1<=16'd0; b2<=b02; b3<=b13;
                             end
                             3'd6: begin
-                                a0<=16'd0; a1<=16'd0; a2<=16'd0; a3<=a03;
-                                b0<=16'd0; b1<=16'd0; b2<=16'd0; b3<=b30;
+                                a0<=16'd0; a1<=16'd0; a2<=16'd0; a3<=a30;
+                                b0<=16'd0; b1<=16'd0; b2<=16'd0; b3<=b03;
                             end
                             3'd7:begin
                                     {a0, a1, a2, a3, b0, b1, b2, b3} <= 128'd0;
