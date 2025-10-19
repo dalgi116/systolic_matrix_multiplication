@@ -2,6 +2,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Company: FEE, CTU in Prague
 // Engineer: Daniel Franc
+
 // Create Date: 19.10.2025 11:55:14
 // Design Name: matrix_multiplier
 // Module Name: main4x4
@@ -37,6 +38,8 @@ module main4x4(
         sop20, sop21, sop22, sop23,
         sop30, sop31, sop32, sop33
     );
+    
+    wire done;
    
     controller4x4 controller(
         clk, reset, start,

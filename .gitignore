@@ -1,5 +1,57 @@
-# Vivado files
-matrix_multiplier/vivado.jou
-matrix_multiplier/vivado.log
-matrix_multiplier/vivado_pid1864.str
-matrix_multiplier/dfx_runtime.txt
+# Vivado project temporary and generated files
+*.jou
+*.log
+*.str
+*.zip
+*.html
+*.xml
+*.rpt
+*.csv
+*.txt
+*.xsa
+*.xpe
+*.wdb
+*.pb
+*.bxml
+*.dcp
+*.runs.xml
+*.ltx
+*.bit
+*.bin
+*.svf
+*.syr
+*.vdb
+*.xmsgs/
+*.sdk/
+*.dbg/
+
+# Vivado auto-generated directories
+matrix_multiplier.cache/
+matrix_multiplier.hw/
+matrix_multiplier.hw_handoff/
+matrix_multiplier.ip_user_files/
+matrix_multiplier.runs/
+matrix_multiplier.gen/
+matrix_multiplier.sim/
+matrix_multiplier.srcs/sources_1/ip/
+matrix_multiplier.srcs/sources_1/bd/
+.Xil/
+matrix_multiplier.webtalk/
+matrix_multiplier.tcl.history
+matrix_multiplier.xsim/
+matrix_multiplier.xpr.cache/
+matrix_multiplier.usage_statistics_webtalk.xml
+matrix_multiplier.vivado*.backup*
+
+# OS / editor-specific
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.bak
+*.lock
+
+# VS Code
+.vscode/
+.history/
